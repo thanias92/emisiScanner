@@ -8,13 +8,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Enable CORS to allow requests from your front-end
-app.use(
-  cors({
-    origin: "http://192.168.90.105:8080", // Replace with your frontend's origin
-    //methods: ["GET", "POST"],
-    //llowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://192.168.90.105:8080", // Replace with your frontend's origin
+//     //methods: ["GET", "POST"],
+//     //llowedHeaders: ["Content-Type", "Authorization"],
+//   })
+// );
+app.use(cors());
 // Set up multer storage and file filtering
 const storage = multer.memoryStorage(); // Store files in memory
 const upload = multer({ storage: storage });
