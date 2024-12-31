@@ -11,8 +11,8 @@ const port = process.env.PORT || 3000;
 app.use(
   cors({
     origin: "http://192.168.90.105:8080", // Replace with your frontend's origin
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    //methods: ["GET", "POST"],
+    //llowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 // Set up multer storage and file filtering
